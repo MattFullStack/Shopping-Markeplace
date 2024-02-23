@@ -1,34 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import React from 'react';
 import "./globals.css";
+import Header from '../components/header';
+import Banner from '@/components/banner';
 
-const inter = Inter({ subsets: ["latin"] });
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-export const metadata: Metadata = {
-  title: "Glaze",
-  description: "Shopping Marketplace",
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div>
+      <Header />
+      <Banner />
+      {/* Other components */}
+    </div>
+  );
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="h-full">
-      <body className="relative h-full font-sans antialiased">{children}
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </body>
-    </html>
-  );
-}
+export default Layout;

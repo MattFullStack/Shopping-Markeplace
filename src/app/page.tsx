@@ -1,10 +1,12 @@
+import React from 'react';
+import Layout from '../app/layout'; // Assurez-vous que le chemin est correct
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <main className="flex flex-col items-center px-4">
-    {/* <Header /> */}
-    {/* <Contact /> */}
-    {/* <Footer /> */}
-    </main>
+    <Layout>
+      <div>Welcome to Glaze</div>
+    </Layout>
   );
-}
+};
+
+export default Home;
