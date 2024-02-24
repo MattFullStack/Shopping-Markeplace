@@ -2,21 +2,23 @@ import React from 'react';
 
 const Banner: React.FC = () => {
   return (
-    <div className="flex justify-between items-center bg-gray-200 mt-8 p-8">
-      {/* Category Femmes */}
-      <div className="w-1/2 p-4 flex justify-center items-center bg-white">
-      <img src="women1.jpg" alt="Femmes" />
-        {/* You would place your image here using an img tag */}
-        <div className="text-2xl font-semibold">Femmes</div>
-      </div>
+    <div className=""> {/* Increased top margin for more space mt-32*/}
+      <div className="flex">
+        {/* Category Femmes */}
+        <div className="relative w-1/2">
+          <img src="brandname6.jpg" alt="Femmes" className="w-full h-screen object-cover" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-white text-4xl font-semibold">Femmes</span>
+          </div>
+        </div>
 
-      {/* Divider */}
-      <div className="w-px bg-gray-300" />
-
-      {/* Category Hommes */}
-      <div className="w-1/2 p-4 flex justify-center items-center bg-white">
-      <img src="men1.jpg" alt="Hommes" />
-        <div className="text-2xl font-semibold">Hommes</div>
+        {/* Category Hommes */}
+        <div className="relative w-1/2">
+          <img src="men2.jpg" alt="Hommes" className="w-full h-screen object-cover" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-white text-4xl font-semibold">Hommes</span>
+          </div>
+        </div>
       </div>
     </div>
   );
